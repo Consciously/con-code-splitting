@@ -12,22 +12,7 @@ function App() {
 	const [route, setRoute] = useState(defaultRoute);
 
 	const onRouteChange = async route => {
-		// Without code splitting
 		setRoute({ ...route, route: route });
-
-		// With code splitting
-
-		// if (route === 'page1') {
-		// 	setRoute({ ...route, route: route });
-		// } else if (route === 'page2') {
-		// 	import('./components/Page2').then(Page2 => {
-		// 		setRoute({ ...route, component: Page2.default });
-		// 	});
-		// } else if (route === 'page3') {
-		// 	import('./components/Page3').then(Page3 => {
-		// 		setRoute({ ...route, component: Page3.default });
-		// 	});
-		// }
 	};
 
 	let content;
@@ -40,16 +25,7 @@ function App() {
 		content = <Page3 onRouteChange={onRouteChange} />;
 	}
 
-	return (
-		<div className='App'>
-			{content}
-			{/* {route.route === 'page1' ? (
-				<Page1 onRouteChange={onRouteChange} />
-			) : (
-				<route.component onRouteChange={onRouteChange} />
-			)} */}
-		</div>
-	);
+	return <div className='App'>{content}</div>;
 }
 
 export default App;
