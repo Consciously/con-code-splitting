@@ -2,7 +2,7 @@ import React from 'react';
 import logo from '../logo.svg';
 import '../App.css';
 
-const Page1 = ({ onRouteChange }) => {
+const Page3 = ({ onRouteChange }) => {
 	return (
 		<div className='App'>
 			<header className='App-header'>
@@ -16,4 +16,4 @@ const Page1 = ({ onRouteChange }) => {
 	);
 };
 
-export default Page1;
+export default Page3;
